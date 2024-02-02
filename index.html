@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./docs/style.css">
+    <title>CryptoCat World</title>
+    
+</head>
+
+<body>
+    <!-- Main content-->
+    <main>
+        <!-- Start screen: is initial shown on the game-->
+        <div id="game-intro" >
+            <div id="intro-info">
+                <p id="intro-text">A cat named Yahiko wants to conquer humanity and the World. To accomplish that, he needs your help to score the maximum number of good coins. Let's play!</p>
+                <div class="center-button">
+                    <button id="start-button">START GAME</button>
+                </div>
+                <br />
+                <div class="center-button">
+                    <button id="instructions-button">Instructions</button> 
+                </div>
+            </div>
+        </div>
+    
+        <!-- Instructions screen: only shown when clicking on the "Instructiions" button-->
+        <div id="instructions-screen">
+                <h3>Instructions</h3>
+                <ul id="instructions-li">
+                    <li>1. Use the right and left arrow keys to move Yahiko<img src="./docs/images/cat.png" alt="image of a cat" style="height: 40px; width: 40px;"></li>
+                    <br />
+                    <li>2. Press the up key to jump</li>
+                    <br />
+                    <li>3. Avoid <img src="./docs/images/near_coin.webp" alt="image of near coin" style="height: 30px; width: 30px;">coins, or you will lose life points</li>
+                    <br />
+                    <li>4. Collect as much <img src="./docs/images/sushi_coin.png" alt="image of sushi coin" style="height: 30px; width: 30px;"><img src="./docs/images/fida_coin.webp" alt="image of fida coin" style="height: 30px; width: 30px;">as you can</li>
+                </ul>
+                <div class="center-button">
+                    <button id="back-home-button">Back to Menu</button>
+                </div>
+            </div>
+
+         <!-- Game screen: where the game happens-->
+         <div id="game-screen">
+            <audio id="soundtrack" src="./audio/rydeen.mp3"></audio>
+            <div>
+                <img src="./docs/images/lives.png" alt="image of a heart" class="lives-icon" />
+                <img src="./docs/images/lives.png" alt="image of a heart" class="lives-icon" />
+                <img src="./docs/images/lives.png" alt="image of a heart" class="lives-icon" />
+                <span id="lives">3</span>
+            </div>
+            <div>
+                <h4 id="game-score">Score: <span id="score">0</span></h4>
+            </div>
+            
+            <div id="points-div">
+                <ul id="points-menu">
+                    <li><img src="./docs/images/sushi_coin.png" alt="image of a sushi coin" class="coin-img">6 points</li>
+                    <li><img src="./docs/images/fida_coin.webp" alt="image of a sushi coin" class="coin-img">1 point</li>
+                    <li><img src="./docs/images/near_coin.webp" alt="image of a sushi coin" class="coin-img">- 1 life</li>
+                </ul>
+            </div>
+           
+         </div>
+
+          <!-- Game over screen: when the game ends-->
+        <div id="game-over">
+            <h1 id="game-over-title">Game Over!</h1>
+            <div>
+                <h4 id="score-title">Score: <span id="score-game-over">0</span></h4>
+            </div>
+            <div class="center-button">
+                <button id="restart-button">Restart Game</button>
+            </div>
+        </div>
+    </main>
+    <!-- the obstacles and player should be before the game script -->
+    <script type="text/javascript" src="./docs/obstacles.js"></script>
+    <script type="text/javascript" src="./docs/player.js"></script>
+    <script type="text/javascript" src="./docs/game.js"></script>
+    <script type="text/javascript" src="./docs/script.js"></script>
+</body>
+</html>
