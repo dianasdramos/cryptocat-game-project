@@ -1,6 +1,6 @@
 # CryptoCat Game project
 
-This game it’s a side-scrolling infinite game, created with HTML5, CSS, JavaScript and DOM.
+This game it’s a side-scrolling infinite game (desktop only), created with HTML5, CSS, JavaScript, and DOM.
 The player needs to:
 
 1. Read and follow the initial instructions
